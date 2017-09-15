@@ -1,0 +1,23 @@
+<html>
+		<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		</head>
+    	<form><br>
+    		<p><label>Nome:</label><br></p>
+			<input placeholder="Nome Completo" type="text" class="form-control" required><br>
+        	<p><label>Email:</label><br></p>
+        	<input placeholder="Email do Responsável" type="text" class="form-control" required><br>
+        	<p><label>Senha:</label><br></p>
+        	<input placeholder="Sua Senha" type="password" class="form-control" required><br>
+        	<p><label>Sexo:</label><br></p>
+        	<input type="radio">Masculino<br>
+        	<p><input type="radio">Feminino</p><br>
+        	<input type="checkbox" required> Li e aceito
+   		</form>
+    		<p><input type="submit" class="btn btn-success" value="Enviar"/></p>
+     
+
+</html>
