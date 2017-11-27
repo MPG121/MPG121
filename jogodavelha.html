@@ -1,0 +1,159 @@
+<html>
+<head>
+   <title>Bootstrap Example</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">  </script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" ></script>
+<style>
+.ble {
+width: 100px;
+height: 100px;
+background:  #A4A4A4;
+color: #000000;
+border-style: double;
+}
+.ble2{
+background: #FE9A2E;
+}
+</style>
+</head>
+<body>
+<script>
+var vez = 0;
+var Jogador1 = 0
+var Jogador2 = 0
+function x_o(id){
+// verificando se eh o jogado 1 ou 2. O jogador 1 é par e o 2 é impar
+if ((vez%2) == 0){
+ document.getElementById(id).innerHTML = "X";
+    document.getElementById(id).value = "X";
+    
+    
+    }
+    
+else{
+ document.getElementById(id).innerHTML = "0";
+    document.getElementById(id).value = "0";
+    
+    
+ }
+    
+vez++;
+ganhador();
+}
+function ganhador(){
+var q1 = document.getElementById("q1").value;
+var q2 = document.getElementById("q2").value;
+var q3 = document.getElementById("q3").value;
+var q4 = document.getElementById("q4").value;
+var q5 = document.getElementById("q5").value;
+var q6 = document.getElementById("q6").value;
+var q7 = document.getElementById("q7").value;
+var q8 = document.getElementById("q8").value;
+var q9 = document.getElementById("q9").value;
+//colunas horizontais
+if ((q1!="")&&(q1==q2)&&(q2==q3))
+  {
+      alert("Você é o ganhador!");
+      
+  }
+ 
+if ((q4!="")&&(q4==q5)&&(q5==q6))
+  {
+      alert("Você é o ganhador!");
+      
+      
+  } 
+ 
+if ((q7!="")&&(q7==q8)&&(q8==q9))
+  {
+      alert("Você é o ganhador!");
+     
+      
+  } 
+//colunas verticais
+if ((q1!="")&&(q1==q4)&&(q4==q7))
+  {
+      alert("Você é o ganhador!");
+      
+      
+  } 
+if ((q2!="")&&(q2==q5)&&(q5==q8))
+  {
+      alert("Você é o ganhador!");
+      
+      
+  }
+ 
+if ((q3!="")&&(q3==q6)&&(q6==q9))
+  {
+      alert("Você é o ganhador!");
+     
+      
+  }
+ 
+//colunas em formato de X
+if ((q1!="")&&(q1==q5)&&(q5==q9))
+  {
+      alert("Você é o ganhador!");
+      
+      
+  }
+  
+if ((q3!="")&&(q3==q5)&&(q5==q7))
+  {
+      alert("Você é o ganhador!");
+      
+      
+  }  
+ 
+}
+
+function reiniciar(){
+document.getElementById("q1").innerHTML = " ";
+document.getElementById("q2").innerHTML = " ";
+document.getElementById("q3").innerHTML = " ";
+document.getElementById("q4").innerHTML = " ";
+document.getElementById("q5").innerHTML = " ";
+document.getElementById("q6").innerHTML = " ";
+document.getElementById("q7").innerHTML = " ";
+document.getElementById("q8").innerHTML = " ";
+document.getElementById("q9").innerHTML = " ";
+vez = 0
+
+}
+
+
+  
+</script>
+
+<p><center><h1>Jogo da Velha</h1></center></p><br>
+<p><center>O Jogador1 é o "X" e o Jogador2 a "O".</center></p>
+<p><center>Bom Jogo!</center><p>
+         <center> <table Id ="table"> 
+     
+      <tr>
+        <td> <button align="center" valign="middle" id="q1" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q2" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q3" class="ble" onclick="x_o(this.id)"/></td>
+      </tr>
+      <tr>
+        <td> <button align="center" valign="middle" id="q4" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q5" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q6" class="ble" onclick="x_o(this.id)"/></td>
+      </tr>
+      <tr>
+        <td> <button align="center" valign="middle" id="q7" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q8" class="ble" onclick="x_o(this.id)"/></td>
+        <td> <button align="center" valign="middle" id="q9" class="ble" onclick="x_o(this.id)"/></td>
+      </tr>
+    
+  </table></center>
+  
+<br>  
+<center><input type = "submit" class="btn btn-danger" onclick="reiniciar()" value = "Reiniciar"></center> 
+<br>
+</body>
+</html>
